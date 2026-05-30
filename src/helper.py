@@ -1,11 +1,11 @@
 from langchain.document_loaders import PyPDFLoader, DirectoryLoader # type: ignore
 from langchain.text_splitter import RecursiveCharacterTextSplitter # type: ignore
-from langchain.embeddings import HuggingFaceEmbeddings # type: ignore
+#from langchain.embeddings import HuggingFaceEmbeddings # type: ignore
 from typing import List
 from langchain.schema import Document # type: ignore
 
 
-#Extract Data From the PDF File
+
 def load_pdf_file(data):
     loader= DirectoryLoader(data,
                             glob="*.pdf",
@@ -43,7 +43,7 @@ def text_split(extracted_data):
 
 
 
-#Download the Embeddings from HuggingFace 
-def download_hugging_face_embeddings():
-    embeddings=HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')  #this model return 384 dimensions
-    return embeddings
+# #Download the Embeddings from HuggingFace 
+# def download_hugging_face_embeddings():
+#     embeddings=HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')  #this model return 384 dimensions
+#     return embeddings
